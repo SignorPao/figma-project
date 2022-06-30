@@ -1,0 +1,322 @@
+/* MAIN START */
+.main {
+  width: 100%;
+
+  .first__block {
+    width: 100%;
+    padding: 200px 0;
+    font-family: $fontTwo;
+
+    .first__block-container {
+      display: flex;
+      gap: 130px;
+
+      .first__block-pic-item {
+        flex: 50%;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+
+        &:hover img.first__block-img {
+          transform: scale(1.2);
+        }
+
+        .first__block-img {
+          @include transition;
+          width: 658px;
+          height: 439px;
+        }
+
+        .first__block-date {
+          position: absolute;
+          top: 40px;
+          left: 50px;
+          color: $white;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        .first__block-img-txt {
+          width: 100%;
+          position: absolute;
+          bottom: 40px;
+          color: $black;
+          padding: 0 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .first__block-img-txt_title {
+            width: 176px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 30px;
+            color: $white;
+          }
+        }
+
+        .first__block-img-link {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .first__block-txt {
+        flex: 50%;
+        color: $black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .section__title {
+          width: 384px;
+          font-weight: 600;
+          font-size: 42px;
+          line-height: 51px;
+        }
+
+        .section__description {
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 35px;
+        }
+
+        .section__button {
+          width: fit-content;
+          @include buttonTransparent;
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+
+  .request__block {
+    background: url('../img/pics/image-for-feedback.jpg') no-repeat;
+    width: 100%;
+    height: 969px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    .request__block-content {
+      width: 472px;
+      height: 100%;
+      padding: 200px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .request__description {
+        color: $black;
+        font-family: $fontTwo;
+
+        h2 {
+          font-weight: 600;
+          font-size: 42px;
+          line-height: 51px;
+          margin-bottom: 40px;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 35px;
+        }
+      }
+
+      input {
+        font-family: $fontOne;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 40px;
+        color: $greyBlue;
+        border: 1px solid $greyBlue;
+        border-radius: 37.5px;
+        text-align: center;
+        padding: 7px auto;
+        background: transparent;
+        outline: none;
+
+        &:focus {
+          border: 1px solid $black;
+          color: $black;
+        }
+      }
+
+      .send {
+        @include buttonYellow;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 42px;
+        text-align: center;
+        padding: 10px auto;
+      }
+    }
+  }
+
+  .reverse__block {
+
+    .reverse__block-container {
+
+      .reverse__pic {
+        order: 2;
+  
+        .reverse__block-img-txt {
+  
+          .reverse__pic-title {
+            width: 476px;
+          }
+        }
+      }
+
+      .reverse__txt {
+
+        .reverse__title {
+          width: 507px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1600px) {
+
+    .first__block {
+      padding: 100px 0;
+      max-width: 1024px;
+      height: 100%;
+      margin: 0 auto;
+
+      .first__block-container {
+        gap: 60px;
+
+        .first__block-pic-item {
+          
+          .first__block-img {
+            width: 500px;
+            height: 334px;
+          }
+
+          .first__block-date {
+            top: 20px;
+            left: 30px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 20px;
+          }
+
+          .first__block-img-txt {
+            bottom: 20px;
+            padding: 0 30px;
+  
+            .first__block-img-txt_title {
+              width: 150px;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 20px;
+            }
+
+            .first__block-img-txt_arrow img {
+              width: 24px;
+            }
+          }
+        }
+
+        .first__block-txt {
+  
+          .section__title {
+            width: 330px;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 34px;
+          }
+  
+          .section__description {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+          }
+  
+          .section__button {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    .request__block {
+      height: 700px;
+
+      .wrapper__inner {
+        max-width: 1024px;
+        height: 100%;
+        margin: 0 auto;
+  
+        .request__block-content {
+          width: 350px;
+          height: 100%;
+          padding: 100px 0;
+
+          .request__description {
+    
+            h2 {
+              font-weight: 600;
+              font-size: 30px;
+              line-height: 40px;
+              margin-bottom: 30px;
+            }
+    
+            p {
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 30px;
+            }
+          }
+
+          input {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+          }
+
+          .send {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+
+    .reverse__block {
+
+      .reverse__block-container {
+  
+        .reverse__pic {
+    
+          .reverse__block-img-txt {
+    
+            .reverse__pic-title {
+              width: 476px;
+            }
+          }
+        }
+  
+        .reverse__txt {
+  
+          .reverse__title {
+            width: 380px;
+          }
+        }
+      }
+    }
+  }
+}
+/* MAIN END */

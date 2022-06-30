@@ -1,0 +1,33 @@
+// mixin
+// button
+@mixin buttonYellow {
+  background: $yellow;
+  font-family: $fontOne;
+  color: $brown;
+  border-radius: 37.5px;
+  &:hover {
+    background: #d6db21;
+    color: #4d1313;
+  }
+}
+
+@mixin buttonTransparent {
+  background: transparent;
+  font-family: $fontOne;
+  color: $yellow;
+  border: 2px solid $yellow;
+  border-radius: 37.5px;
+  padding: 12px 34px;
+  @include transition;
+  &:hover {
+    background: $yellow;
+    color: $brown;
+  }
+}
+
+// transition
+@mixin transition {
+  transition: all .2s ease;
+}
+
+
